@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Soccer</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+ <header class="cabecalho">
+    <div class="logoPai">
+        <img class= "logoFilho" src="logo.png" alt= "" >
+        <h3>Soccer</h3>
+    </div>
+    <nav class="list-menu">
+            <a class="linkMenu" href="index.html">Inicio</a>
+            <a class="linkMenu" href="sobre.html">Sobre nós</a>
+            <a class="linkMenu" href="noticia.html">Notícias</a>
+            <a class="linkMenu" href="contato.html">Contatos</a>
+            <a class="linkMenu" href="#"><i class="bi bi-instagram"></i></a>
+            <a class="linkMenu" href="#"><i class="bi bi-facebook"></i></a>
+            <a class="linkMenu" href="contador.html"><i class="bi bi-bag"></i></a>
+            
+ </header>
+
+<body >
+
+<h2>Digite um Nome</h2>
+
+<form>
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome">
+  <br><br>
+  
+  <input type="button" value="Mostrar Vogais" onclick="mostrarVogais()">
+</form>
+
+<p id="resultado"></p>
+
+<script>
+function mostrarVogais() {
+  const nome = document.getElementById("nome").value;
+  const vogais = ['a', 'e', 'i', 'o', 'u'];
+  let vogaisEncontradas = '';
+
+  for (let char of nome.toLowerCase()) {
+    if (vogais.includes(char)) {
+      vogaisEncontradas += char + ' ';
+    }
+  }
+
+  const resultado = document.getElementById("resultado");
+  resultado.textContent = `Vogais encontradas: ${vogaisEncontradas}`;
+}
+</script>
+<footer>
+    <p>&copy; FAZ O PIX!</p>
+</footer>
+
+</body>
+</html>
